@@ -7,12 +7,10 @@ const router = express.Router();
 
 //  /admin/add-product => GET
 router.get("/add-product", (req, res, next) => {
-  res.render("./hbs/add-product", {
+  res.render("add-product", {
     pageTitle: "Add Product",
+    css: ["forms", "product"],
     path: "/admin/add-product",
-    activeAddProduct: true,
-    formsCSS: true,
-    productCSS: true,
   });
 });
 

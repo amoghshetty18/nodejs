@@ -10,13 +10,12 @@ const adminData = require("./admin");
 
 router.get("/", (req, res, next) => {
   const { products } = adminData;
-  res.render("./hbs/shop", {
+  console.log(products);
+  res.render("shop", {
     prods: products,
     pageTitle: "Shop",
+    css: ["product", "forms"],
     path: "/",
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true,
   });
 });
 
